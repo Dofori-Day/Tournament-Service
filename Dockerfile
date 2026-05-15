@@ -1,7 +1,7 @@
 FROM maven:3.9-eclipse-temurin-17 AS build
 WORKDIR /app
-COPY Tournament-2026-backend/IdeaProjects/TournamentTask2026/pom.xml .
-COPY Tournament-2026-backend/IdeaProjects/TournamentTask2026/src ./src
+COPY pom.xml .
+COPY src ./src
 RUN mvn clean package -DskipTests
 
 FROM eclipse-temurin:17-jre-jammy
